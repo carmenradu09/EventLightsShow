@@ -60,12 +60,8 @@ class EventLightsProcessorTest {
         commandCoordinates.setMaxX(9999);
         commandCoordinates.setMaxY(999);
 
-        // Act
+        // Act & Assert
         assertThrows(ArrayIndexOutOfBoundsException.class,
                 () -> sut.processLights(commandCoordinates));
-
-
-        // Assert
-        System.out.println(sut.getLightsStatus());
     }
 }
